@@ -14,6 +14,7 @@ In order to setup it please follow the following instructions:
   python manage.py makemigrations phbook
   python manage.py migrate
 ```
+url main page: phbook/index
 
 ### initial data fixtures:
 ```
