@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'testphone'%}" method="POST">{% csrf_token %}
+        <fieldset> 
+            <input type="text" name="phone" pattern="[0-9\-+ ()]*" placeholder="np. (+48)123456789" maxlength="50">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="submit" value="Dodaj">
+            <input type="reset">
+        </fieldset> 
+    </form><br>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>phbook</title>
+    <link href="{%static 'styles.css'%}" rel="stylesheet" />
+</head>
+<body>
+<div style="border: 1px solid black">
+    <h1 style="margin-left: 10px">Książka kontaktów</h1>
+    <p style="margin-left: 10px"><b>Szukaj osoby:</b></p>
+    <p><form action="{% url 'search_results' %}" method="get">{% csrf_token %}
+        <fieldset> 
+            <input name="q" type="text" placeholder="Szukaj...">
+            <input type="submit" value="Szukaj">
+            <input type="reset">
+        </fieldset> 
+    <em style="margin-left: 10px">(uwzględnia również adres e-mail lub nr telefonu)</em>
+    </p> 
+</div><br>
+<div id='1'>
+    <a style="margin-left: 10px" href="{% url 'addperson' %}">Dodaj osobę</a>
+    <h2 style="margin-left: 10px">Lista osób alfabetycznie:</h2>
+    <p>
+    
+        {% for person in allpersons %}
+        <table>
+            <tr><td  style="width: 350px";><b>{{person.lastname}} {{ person.firstname }}</b></td>
+            <td style="width: 60px;"><a href="{% url 'edit_person' person.id%}">Edytuj</a></td>
+            <td style="width: 60px;"><a href="{% url 'del_person' person.id%}">Usuń</a></td>
+            <td style="width: 80px;"><a href="{% url 'add_email' person.id%}">+ e-mail</a></td>
+            <td style="width: 80px;"><a href="{% url 'add_phone' person.id%}">+ telefon</a></td></tr>
+                {% for email in person.email_set.all %}
+                <tr><td>{{email.email}}</td><td></td><td></td><td></td><td></td></tr>
+                {% endfor %}
+                {% for phones in person.phonenumber_set.all %}
+                <tr><td>{{phones.phonenumber}}</td><td></td><td></td><td></td><td></td></tr>
+                {% endfor %}
+                <input type="hidden" name="id" value="{{person.id}}">
+        </table><br>
+        {% endfor %}
+    
+    </p>
+</div>
+</body>
+</html>
