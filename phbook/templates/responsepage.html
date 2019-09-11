@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'main.html' %}
+
+{% block title %} Komunikat {% endblock %}
+
+{% block body %}
     <div style="border: 1px solid black">
             <p>
-                Nie można usunąć: '{{pname}}'. Do tej osoby przypisano n-ry telefonów i/lub adresy e-mail
+                &nbsp&nbspNie można usunąć: '{{pname}}'. Do tej osoby przypisano n-ry telefonów i/lub adresy e-mail
                 <a href="{% url 'index'%}"> &lt;&lt;Powrót do listy</a> 
             </p>
     </div>
-
-</body>
-</html>
+{% endblock %}

@@ -1,30 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wyniki</title>
-</head>
-<body>
+{% extends 'main.html' %}
+
+{% block title %} Wyniki {% endblock %}
+
+{% block body %}
+
 <div style="border: 1px solid black">
-    <a href="{% url 'index'%}"> &lt;&lt;Powrót do listy</a> 
+    <a href="{% url 'index'%}">&nbsp&lt;&lt;Powrót do listy</a> 
+    <h1>&nbspWyniki:</h1>
 </div>
-
-
 <div>
-    <h1>Wyniki:</h1>
-    <ul>
+    <p>
         {% for person in allpersons %}
-        <li><b>{{ person.firstname }} {{person.lastname}}</b></li>
-            {% for email in person.email_set.all %}
-                <li>{{email.email}}</li>
-            {% endfor %}
-            {% for phones in person.phonenumber_set.all %}
-                <li>{{phones.phonenumber}}</li>
-            {% endfor %}<br>
+        <table>
+            <tr><td  style="width: 350px";><b>{{person.lastname}} {{ person.firstname }}</b></td>
+            <td style="width: 60px;"><a href="{% url 'edit_person' person.id%}">Edytuj</a></td>
+            <td style="width: 60px;"><a href="{% url 'del_person' person.id%}">Usuń</a></td>
+            <td style="width: 80px;"><a href="{% url 'add_email' person.id%}">+ e-mail</a></td>
+            <td style="width: 80px;"><a href="{% url 'add_phone' person.id%}">+ telefon</a></td></tr>
+                {% for email in person.email_set.all %}
+                <tr><td>{{email.email}}</td><td></td><td></td><td></td><td></td></tr>
+                {% endfor %}
+                {% for phones in person.phonenumber_set.all %}
+                <tr><td>{{phones.phonenumber}}</td><td></td><td></td><td></td><td></td></tr>
+                {% endfor %}
+                <input type="hidden" name="id" value="{{person.id}}">
+        </table><br>
         {% endfor %}
-    </ul>
+    </p>
 </div>
-</body>
-</html>
+{% endblock %}

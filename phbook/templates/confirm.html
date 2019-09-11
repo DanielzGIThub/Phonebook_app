@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Czy na pewno chcesz usunąć {{ pname }} ?</h1>
+{% extends 'main.html' %}
+
+{% block title %} Potwierdź {% endblock %}
+
+{% block body %}
+    <h2>Czy na pewno chcesz usunąć kontakt: {{ pname }} ?</h2>
     <form method="POST">
         {% csrf_token %}
-        <input type="submit" value="Tak" class="btn btn-md btn-secondary">   
+        <a href="{% url 'index'%}"> &lt;&lt;Powrót do listy</a>  
+        <input type="submit" value="Tak" class="btn btn-md btn-secondary">
     </form>
-
-</body>
-</html>
+{% endblock %}
