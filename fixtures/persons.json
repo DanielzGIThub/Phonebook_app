@@ -1,0 +1,402 @@
+[
+{
+    "model": "phbook.person",
+    "pk": 9,
+    "fields": {
+        "firstname": "Ma\u0142gorzata",
+        "lastname": "Adamczak"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 10,
+    "fields": {
+        "firstname": "Borys",
+        "lastname": "Budka"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 11,
+    "fields": {
+        "firstname": "Artur",
+        "lastname": "D\u0119bski"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 12,
+    "fields": {
+        "firstname": "Ludwik",
+        "lastname": "Dorn"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 13,
+    "fields": {
+        "firstname": "Jerzy",
+        "lastname": "Fedorowicz"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 14,
+    "fields": {
+        "firstname": "Zbigniew",
+        "lastname": "Girzy\u0144ski"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 15,
+    "fields": {
+        "firstname": "Cezary",
+        "lastname": "Grabarczyk"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 16,
+    "fields": {
+        "firstname": "Krzysztof",
+        "lastname": "Jurgiel"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 17,
+    "fields": {
+        "firstname": "Beata",
+        "lastname": "Kempa"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 18,
+    "fields": {
+        "firstname": "Ewa",
+        "lastname": "Kopacz"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 19,
+    "fields": {
+        "firstname": "Leszek",
+        "lastname": "Miller"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 20,
+    "fields": {
+        "firstname": "S\u0142awomir",
+        "lastname": "Neumann"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 21,
+    "fields": {
+        "firstname": "S\u0142awomir",
+        "lastname": "Nowak"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 22,
+    "fields": {
+        "firstname": "Cezary",
+        "lastname": "Olejniczak"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 23,
+    "fields": {
+        "firstname": "Krystyna",
+        "lastname": "Paw\u0142owicz"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 24,
+    "fields": {
+        "firstname": "Julia",
+        "lastname": "Pitera"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 25,
+    "fields": {
+        "firstname": "El\u017cbieta",
+        "lastname": "Rafalska"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 26,
+    "fields": {
+        "firstname": "Marek",
+        "lastname": "Suski"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 27,
+    "fields": {
+        "firstname": "Jacek",
+        "lastname": "\u017balek"
+    }
+},
+{
+    "model": "phbook.person",
+    "pk": 28,
+    "fields": {
+        "firstname": "Tadeusz",
+        "lastname": "Iwi\u0144ski"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 68,
+    "fields": {
+        "person": 10,
+        "phonenumber": "(32) 271-20-40"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 69,
+    "fields": {
+        "person": 12,
+        "phonenumber": "(22) 621-29-24"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 70,
+    "fields": {
+        "person": 13,
+        "phonenumber": "(12) 429-12-06"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 71,
+    "fields": {
+        "person": 14,
+        "phonenumber": "(56) 621-13-93"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 72,
+    "fields": {
+        "person": 15,
+        "phonenumber": "(42) 631-07-12"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 73,
+    "fields": {
+        "person": 16,
+        "phonenumber": "(85) 742-30-37"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 74,
+    "fields": {
+        "person": 17,
+        "phonenumber": "(62) 785-24-33"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 75,
+    "fields": {
+        "person": 19,
+        "phonenumber": "(58) 622-31-98"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 76,
+    "fields": {
+        "person": 20,
+        "phonenumber": "(58) 536-83-61"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 77,
+    "fields": {
+        "person": 21,
+        "phonenumber": "(58) 767-72-40"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 78,
+    "fields": {
+        "person": 22,
+        "phonenumber": "(46) 837-40-25"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 79,
+    "fields": {
+        "person": 24,
+        "phonenumber": "(22) 826-41-93"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 80,
+    "fields": {
+        "person": 25,
+        "phonenumber": "691-770-217"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 81,
+    "fields": {
+        "person": 26,
+        "phonenumber": "(48) 362-50-32"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 82,
+    "fields": {
+        "person": 27,
+        "phonenumber": "(85) 874-42-87"
+    }
+},
+{
+    "model": "phbook.phonenumber",
+    "pk": 83,
+    "fields": {
+        "person": 28,
+        "phonenumber": "(89) 523-56-86"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 52,
+    "fields": {
+        "person": 10,
+        "email": "poczta@borysbudka.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 53,
+    "fields": {
+        "person": 12,
+        "email": "ludwik.dorn@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 54,
+    "fields": {
+        "person": 13,
+        "email": "jerzy.fedorowicz@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 55,
+    "fields": {
+        "person": 14,
+        "email": "zbigniew.girzynski@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 56,
+    "fields": {
+        "person": 15,
+        "email": "cezary.grabarczyk@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 57,
+    "fields": {
+        "person": 16,
+        "email": "krzysztof@jurgiel.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 58,
+    "fields": {
+        "person": 17,
+        "email": "beata.kempa@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 59,
+    "fields": {
+        "person": 20,
+        "email": "posel@neumannslawomir.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 60,
+    "fields": {
+        "person": 21,
+        "email": "biuro@slawomirnowak.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 61,
+    "fields": {
+        "person": 22,
+        "email": "cezary.olejniczak@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 62,
+    "fields": {
+        "person": 24,
+        "email": "julia.pitera@sejm.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 63,
+    "fields": {
+        "person": 23,
+        "email": "kontakt@krystynapawlowicz.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 64,
+    "fields": {
+        "person": 26,
+        "email": "bpms@wp.pl"
+    }
+},
+{
+    "model": "phbook.email",
+    "pk": 65,
+    "fields": {
+        "person": 27,
+        "email": "biuroposelskie@jacekzalek.pl"
+    }
+}
+]
