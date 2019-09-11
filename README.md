@@ -3,8 +3,8 @@ A simple app storing email addresses and phone numbers created using Django 2.2.
 
 In order to setup it please follow the following instructions:
 
-## just after you clone the repository to Your directory:
-'''
+### just after you clone the repository to Your directory:
+```
   $cd Phonebook_app
   pip3 install virtualenv
   virtualenv -p python3 env
@@ -13,9 +13,9 @@ In order to setup it please follow the following instructions:
   python manage.py runserver
   python manage.py makemigrations phbook
   python manage.py migrate
-'''
+```
 
-## initial data fixtures:
-'''
+### initial data fixtures:
+```
   python3 manage.py loaddata /fixtures/persons.json
-'''
+```
