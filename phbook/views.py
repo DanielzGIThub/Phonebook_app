@@ -10,7 +10,9 @@ from django.contrib.auth.decorators import login_required
 
 def personlist1(request):
     allpersons = Person.objects.all().order_by('lastname')
-    context = {'allpersons': allpersons}
+    x=True
+    context = {'allpersons': allpersons, 'x': x}
+    
 
     return render(request, 'index.html', context)
 
@@ -27,6 +29,7 @@ class SearchByPerson(generic.ListView):
         ).distinct()
         return object_list
 
+
 #@login_required
 def add_person(request):
     form = PersonAdd(request.POST or None)
@@ -34,6 +37,7 @@ def add_person(request):
         form.save()
         return redirect(personlist1)
     return render(request, 'new_person.html', {'form' : form})
+
 
 #@login_required
 def edit_person(request, id):
@@ -43,6 +47,7 @@ def edit_person(request, id):
         form.save()
         return redirect(personlist1)
     return render(request, 'new_person.html', {'form' : form})
+
 
 #@login_required
 def del_person(request, id):
@@ -57,10 +62,6 @@ def del_person(request, id):
     
     return render(request, 'confirm.html', {'person' : person, 'pname': pname})
 
-'''
-def response(request):
-    pname =str(person.firstname) + ' ' + str(person.lastname)
-    return render(request, 'response.html', {'pname': pname})'''
 
 @csrf_exempt
 def email(request):
@@ -72,22 +73,11 @@ def email(request):
     person.email_set.create(email=email)
     return redirect(personlist1)
 
-'''
-@csrf_exempt
-def phone(request):
-    #id = request.POST.get('id')
-    #return render(request, 'test.html', {'id': id})
-    id = request.POST.get('id')
-    phone = request.POST.get('phone')
-    person = Person.objects.get(pk=id)
-    person.phonenumber_set.create(phonenumber=phone)
-    return redirect(personlist1)
-'''
 
 #@login_required
 def phoneadd(request, id):
-    #id = request.POST.get('id')
     return render(request, 'addphone.html', {'id' : id})
+
 
 @csrf_exempt
 def phonesave(request):
@@ -97,10 +87,11 @@ def phonesave(request):
     person.phonenumber_set.create(phonenumber=phone)
     return redirect(personlist1)
 
+
 #@login_required
 def emailadd(request, id):
-    #id = request.POST.get('id')
     return render(request, 'addemail.html', {'id' : id})
+
 
 @csrf_exempt
 def emailsave(request):

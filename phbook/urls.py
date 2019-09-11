@@ -14,11 +14,3 @@ urlpatterns = [
     path('testphone/', views.phonesave, name='testphone'),
     path('testemail/', views.emailsave, name='testemail'),
 ]
-    
-'''
-    path('all/', all_persons),
-    path('addperson/', add_person, name='addperson'),
-    path('editperson/<int:id>/', edit_person, name='edit_person'),
-    path('delperson/<int:id>/', del_person, name='del_person'),
-    path('addphone/<int:id>/', add_phone, name='add_phone'),
-    path('addemail/<int:id>/', add_email, name='add_email'),'''

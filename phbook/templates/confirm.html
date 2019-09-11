@@ -3,10 +3,16 @@
 {% block title %} Potwierdź {% endblock %}
 
 {% block body %}
-    <h2>Czy na pewno chcesz usunąć kontakt: {{ pname }} ?</h2>
-    <form method="POST">
-        {% csrf_token %}
-        <a href="{% url 'index'%}"> &lt;&lt;Powrót do listy</a>  
-        <input type="submit" value="Tak" class="btn btn-md btn-secondary">
-    </form>
+<div class="card text-white bg-secondary mb-3">
+        <center>
+            <div class="card-header">PHBOOK 1.0</div>
+                <h2>Czy na pewno chcesz usunąć kontakt: {{ pname }} ?</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <a href="{% url 'index'%}" class="btn btn-secondary btn-lg active"><i class="fas fa-angle-double-left"></i> Powrót do listy</a>  
+                    <input type="submit" value="Tak" class="btn btn-secondary btn-lg active">
+                </form>
+            </div>
+        </center> 
+    <div>
 {% endblock %}

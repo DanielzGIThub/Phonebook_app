@@ -3,29 +3,38 @@
 {% block title %} Wyniki {% endblock %}
 
 {% block body %}
-
-<div style="border: 1px solid black">
-    <a href="{% url 'index'%}">&nbsp&lt;&lt;Powrót do listy</a> 
-    <h1>&nbspWyniki:</h1>
-</div>
-<div>
-    <p>
-        {% for person in allpersons %}
-        <table>
-            <tr><td  style="width: 350px";><b>{{person.lastname}} {{ person.firstname }}</b></td>
-            <td style="width: 60px;"><a href="{% url 'edit_person' person.id%}">Edytuj</a></td>
-            <td style="width: 60px;"><a href="{% url 'del_person' person.id%}">Usuń</a></td>
-            <td style="width: 80px;"><a href="{% url 'add_email' person.id%}">+ e-mail</a></td>
-            <td style="width: 80px;"><a href="{% url 'add_phone' person.id%}">+ telefon</a></td></tr>
-                {% for email in person.email_set.all %}
-                <tr><td>{{email.email}}</td><td></td><td></td><td></td><td></td></tr>
-                {% endfor %}
-                {% for phones in person.phonenumber_set.all %}
-                <tr><td>{{phones.phonenumber}}</td><td></td><td></td><td></td><td></td></tr>
-                {% endfor %}
-                <input type="hidden" name="id" value="{{person.id}}">
-        </table><br>
-        {% endfor %}
-    </p>
-</div>
+<div class="card text-white bg-secondary mb-3">
+        <center>
+            <div class="card-header">PHBOOK 1.0</div>
+                <a href="{% url 'index'%}" class="btn btn-secondary btn-lg active"><i class="fas fa-angle-double-left"></i> Powrót do listy</a> 
+                <h1>&nbspWyniki:</h1>
+            </div>
+        </center> 
+    <div>
+<center>
+    <div>
+        <p>
+            {% for person in allpersons %}
+            <table>
+                <tr><td  style="width: 240px";><b>{{person.lastname}} {{ person.firstname }}</b></td>
+                <td style="width: 40px;"><a href="{% url 'edit_person' person.id%}"><i class="fas fa-edit"></i></a></td>
+                {% if person.email_set.all or person.phonenumber_set.all %}
+                <td style="width: 40px;"><a href="{% url 'del_person' person.id%}" class="disabled"></a></td>
+                {% else %}
+                <td style="width: 40px;"><a href="{% url 'del_person' person.id%}"><i class="fas fa-trash"></i></a></td>
+                {% endif %}
+                <td style="width: 50px;"><a href="{% url 'add_email' person.id%}"><i class="fas fa-plus"></i><i class="fas fa-at"></i></a></td>
+                <td style="width: 50px;"><a href="{% url 'add_phone' person.id%}"><i class="fas fa-plus"></i><i class="fas fa-phone"></i></a></td></tr>
+                    {% for email in person.email_set.all %}
+                    <tr><td>{{email.email}}</td><td></td><td></td><td></td><td></td></tr>
+                    {% endfor %}
+                    {% for phones in person.phonenumber_set.all %}
+                    <tr><td>{{phones.phonenumber}}</td><td></td><td></td><td></td><td></td></tr>
+                    {% endfor %}
+                    <input type="hidden" name="id" value="{{person.id}}">
+            </table><br>
+            {% endfor %}
+        </p>
+    </div>
+</center>
 {% endblock %}
