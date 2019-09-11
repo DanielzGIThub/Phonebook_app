@@ -5,7 +5,7 @@ In order to setup it please follow the following instructions:
 
 ## just after you clone the repository to Your directory:
 
-  $cd Phonebook_app
+  cd Phonebook_app
   pip3 install virtualenv
   virtualenv -p python3 env
   source env/bin/activate
