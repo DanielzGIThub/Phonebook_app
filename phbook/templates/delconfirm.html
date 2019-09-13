@@ -6,7 +6,7 @@
 <div class="card text-white bg-secondary mb-3">
         <center>
             <div class="card-header">PHBOOK 1.0</div>
-                <h2>Czy na pewno chcesz usunąć kontakt: {{ pname }} ?</h2>
+                <h2>Czy na pewno chcesz usunąć kontakt: {{ person }} ?</h2>
                 <form method="POST">
                     {% csrf_token %}
                     <a href="{% url 'index'%}" class="btn btn-secondary btn-lg active"><i class="fas fa-angle-double-left"></i> Powrót do listy</a>  

@@ -6,7 +6,7 @@
 <div class="card text-white bg-secondary mb-3">
         <center>
             <div class="card-header">PHBOOK 1.0</div>
-                <form action="{% url 'testphone'%}" method="POST">{% csrf_token %}
+                <form method="POST">{% csrf_token %}
                         <input type="text" name="phone" pattern="[0-9\-+ ()]*" placeholder="np. (+48)123456789" maxlength="50">
                         <input type="hidden" name="id" value="{{id}}">
                         <input type="submit" value="Dodaj" class="btn btn-lg btn-primary">

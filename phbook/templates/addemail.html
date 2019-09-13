@@ -6,7 +6,7 @@
 <div class="card text-white bg-secondary mb-3">
         <center>
             <div class="card-header">PHBOOK 1.0</div>
-                <form action="{% url 'testemail'%}" method="POST">{% csrf_token %}
+                <form method="POST">{% csrf_token %}
                         <input type="text" name="email" pattern="(.*)@(.*).(.*)" placeholder="np. xxxx@xxx.xx" maxlength="100">
                         <input type="hidden" name="id" value="{{id}}">
                         <input type="submit" class="btn btn-lg btn-primary" value="Dodaj">
